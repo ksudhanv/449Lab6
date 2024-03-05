@@ -3,5 +3,14 @@ layout: layout.liquid
 title: 11ty Boilerplate
 ---
 
-<h1>Yet Another 11ty <strong>Boilerplate</strong></h1>
-<img alt="pine" src="/images/pine.png" width="50" />
+<h1>Generate a Name!</h1>
+<div x-data="{name: ['Bob','Jim','Jeff','Prince Charming From Shrek 2','Guy Fieri','Steven','Hajruddin','Tony','Sam','Sudhanv']}">
+    <button @click="Click(name);">Click Me!</button>
+    <h1 id="namePlace">...</h1>
+    <script>
+        function Click(name)
+        {
+            document.getElementById("namePlace").innerHTML = name[Math.floor(Math.random() * 10)];
+        }
+    </script>
+</div>
